@@ -56,9 +56,11 @@
 
 
 
-(function(){
+<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
 
-  emailjs.init("aw6eEXNyWYUKKhiV6"); // yahan apni key
+
+(function(){
+  emailjs.init("YOUR_PUBLIC_KEY");
 })();
 
 document.getElementById("contact-form")
@@ -66,13 +68,13 @@ document.getElementById("contact-form")
   e.preventDefault();
 
   emailjs.sendForm(
-    "service_yfat94f",   // service id
-    "template_spjsjfh",  // template id
+    "YOUR_SERVICE_ID",
+    "YOUR_TEMPLATE_ID",
     this
-  )
-  .then(function() {
-    alert("Message sent successfully ✅");
-  }, function(error) {
-    alert("Failed ❌ " + error.text);
+  ).then(() => {
+    alert("Message sent ✅");
+  }).catch((error) => {
+    console.log(error);
+    alert("Error ❌");
   });
 });
