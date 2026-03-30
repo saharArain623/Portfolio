@@ -56,9 +56,6 @@
 
 
 
-<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
-
-
 (function(){
   emailjs.init("service_yfat94f");
 })();
