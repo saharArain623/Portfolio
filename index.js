@@ -60,7 +60,7 @@
 
 
 (function(){
-  emailjs.init("YOUR_PUBLIC_KEY");
+  emailjs.init("service_yfat94f");
 })();
 
 document.getElementById("contact-form")
@@ -68,8 +68,8 @@ document.getElementById("contact-form")
   e.preventDefault();
 
   emailjs.sendForm(
-    "YOUR_SERVICE_ID",
-    "YOUR_TEMPLATE_ID",
+    "aw6eEXNyWYUKKhiV6",
+    "template_spjsjfh",
     this
   ).then(() => {
     alert("Message sent ✅");
