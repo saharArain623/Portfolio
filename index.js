@@ -53,3 +53,26 @@
     // Start typing
     type();
     AOS.init();
+
+
+
+(function(){
+
+  emailjs.init("aw6eEXNyWYUKKhiV6"); // yahan apni key
+})();
+
+document.getElementById("contact-form")
+.addEventListener("submit", function(e) {
+  e.preventDefault();
+
+  emailjs.sendForm(
+    "service_yfat94f",   // service id
+    "template_spjsjfh",  // template id
+    this
+  )
+  .then(function() {
+    alert("Message sent successfully ✅");
+  }, function(error) {
+    alert("Failed ❌ " + error.text);
+  });
+});
