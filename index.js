@@ -55,9 +55,8 @@
     AOS.init();
 
 
-
 (function(){
-  emailjs.init("service_yfat94f");
+  emailjs.init("aw6eEXNyWYUKKhiV6");
 })();
 
 document.getElementById("contact-form")
@@ -65,7 +64,7 @@ document.getElementById("contact-form")
   e.preventDefault();
 
   emailjs.sendForm(
-    "aw6eEXNyWYUKKhiV6",
+    "service_yfat94f",
     "template_spjsjfh",
     this
   ).then(() => {
