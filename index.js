@@ -56,7 +56,7 @@
 
 
 (function(){
-  emailjs.init("aw6eEXNyWYUKKhiV6");
+  emailjs.init("aw6eEXNyWYUKKhiV6"); // Public key from EmailJS dashboard
 })();
 
 document.getElementById("contact-form")
@@ -64,14 +64,13 @@ document.getElementById("contact-form")
   e.preventDefault();
 
   emailjs.sendForm(
-    "service_yfat94f",
-    "template_spjsjfh",
+    "service_yfat94f",   // ✅ service ID
+    "template_spjsjfh",  // ✅ template ID
     this
   ).then(() => {
     alert("Message sent ✅");
   }).catch((error) => {
-    console.log(error);
-    alert("Error ❌");
+    console.log("FULL ERROR:", error);
+    alert(JSON.stringify(error)); // Exact error dikhega
   });
 });
-
