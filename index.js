@@ -74,7 +74,4 @@ document.getElementById("contact-form")
     alert("Error ❌");
   });
 });
-.catch((error) => {
-  console.log("FULL ERROR:", error);
-  alert(JSON.stringify(error)); // ye exact error show karega
-});
+
